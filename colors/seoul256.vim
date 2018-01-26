@@ -382,6 +382,11 @@ call s:hi('Ignore',  [s:dark_bg + 3, s:light_bg - 3], [s:dark_bg, s:light_bg])
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""
 
+let s:lighter_light = s:light_bg + 1
+let s:darker_light = s:light_bg - 1
+let s:darker_dark = s:dark_bg - 1
+let s:lighter_dark = s:dark_bg + 1
+
 " vim-indent-guides
 " -----------------
 let g:indent_guides_auto_colors = 0
