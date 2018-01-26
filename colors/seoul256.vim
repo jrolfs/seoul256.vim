@@ -190,6 +190,9 @@ function! s:hi(item, fg, bg)
   if !empty(bg)
     execute printf("highlight %s ctermbg=%s guibg=%s", a:item, bg, get(s:rgb_map, bg, 'NONE'))
   endif
+  " if !empty(gui)
+  "   execute printf("highlight %s gui=%s", a:item, )
+  " endif
 endfunction
 
 let s:gui = has('gui_running')
