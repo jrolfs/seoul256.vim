@@ -287,8 +287,8 @@ call s:hi('DiffDelete', ['NONE', 'NONE'], [95, 181])
 call s:hi('DiffChange', ['NONE', 'NONE'], [s:dark_bg + 3, 189])
 call s:hi('DiffText',   ['NONE', 'NONE'], [52, 224])
 
-call s:hi('Folded', [101, 101], [s:dark_bg + 1, s:light_bg - 2])
 call s:hi('VertSplit', [s:dark_bg - 1, s:light_bg - 1], [s:dark_bg - 1, s:light_bg - 1])
+call s:hi('Folded', [s:dark_bg + 1, s:light_bg - 2], [s:dark_bg + 1, s:light_bg - 2])
 
 " set foldcolumn=1
 call s:hi('FoldColumn', [144, 94], [s:dark_bg + 1, s:light_bg - 2])
@@ -371,7 +371,7 @@ call s:hi('Question', [179, 88], ['', ''])
 call s:hi('WarningMsg', [179, 88], ['', ''])
 
 " Sign column
-call s:hi('SignColumn', [173, 173], [s:dark_bg, s:light_bg])
+call s:hi('SignColumn', [173, 173], [s:dark_bg + 1, s:light_bg - 2])
 
 " Diff
 call s:hi('diffAdded',   [108, 65], ['', ''])
@@ -405,8 +405,8 @@ call s:hi('GitGutterChangeDelete', [168, 168], [s:dark_bg + 1, s:light_bg - 2])
 
 " ale
 " ---
-call s:hi('ALEErrorSign', [161, 161], [s:dark_bg, s:light_bg])
-call s:hi('ALEWarningSign', [174, 131], [s:dark_bg, s:light_bg])
+call s:hi('ALEErrorSign', [161, 161], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('ALEWarningSign', [174, 131], [s:dark_bg + 1, s:light_bg - 2])
 
 " vim-signify
 " -----------
