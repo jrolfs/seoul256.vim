@@ -284,8 +284,8 @@ call s:hi('DiffDelete', ['NONE', 'NONE'], [95, 181])
 call s:hi('DiffChange', ['NONE', 'NONE'], [s:dark_bg + 3, 189])
 call s:hi('DiffText',   ['NONE', 'NONE'], [52, 224])
 
-call s:hi('VertSplit', [s:dark_bg_2, s:light_bg - 3], [s:dark_bg_2, s:light_bg - 3])
 call s:hi('Folded', [101, 101], [s:dark_bg + 1, s:light_bg - 2])
+call s:hi('VertSplit', [s:dark_bg - 1, s:light_bg - 1], [s:dark_bg - 1, s:light_bg - 1])
 
 " set foldcolumn=1
 call s:hi('FoldColumn', [144, 94], [s:dark_bg + 1, s:light_bg - 2])
