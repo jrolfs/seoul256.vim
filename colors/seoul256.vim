@@ -266,7 +266,7 @@ function! s:hi(...)
 endfunction
 
 
-let s:gui = has('gui_running')
+let s:gui = has('gui_running') || has('gui_vimr')
 if !s:gui
   set t_Co=256
 end
@@ -354,7 +354,7 @@ call s:hi('CursorColumn', ['', ''], [s:dark_bg - 1, s:light_bg - 1])
 
 call s:hi('Directory', [187, 95], ['', ''])
 
-call s:hi('DiffAdd',    ['NONE', 'NONE'], [22, 151])
+call s:hi('DiffAdd',    ['NONE', 'NONE'], [30, 30])
 call s:hi('DiffDelete', ['NONE', 'NONE'], [95, 181])
 call s:hi('DiffChange', ['NONE', 'NONE'], [s:dark_bg + 3, 189])
 call s:hi('DiffText',   ['NONE', 'NONE'], [52, 224])
@@ -477,13 +477,28 @@ call s:hi('GitGutterChangeDelete', [168, 168], [s:dark_bg + 1, s:light_bg - 2])
 " ale
 " ---
 call s:hi('ALEErrorSign', [218, 218], [s:dark_bg + 1, s:light_bg - 2], 'bold')
-call s:hi('ALEWarningSign', [220, 220], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+call s:hi('ALEWarningSign', [222, 222], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+
+call s:hi('CocErrorSign', [218, 218], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+call s:hi('CocWarningSign', [222, 222], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+call s:hi('CocHintSign', [108, 108], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+call s:hi('CocInfoSign', [116, 116], [s:dark_bg + 1, s:light_bg - 2], 'bold')
 
 " vim-signify
 " -----------
 call s:hi('SignifySignAdd', [108, 65], [s:dark_bg + 1, s:light_bg - 2], 'bold')
 call s:hi('SignifySignChange', [68, 68], [s:dark_bg + 1, s:light_bg - 2], 'bold')
 call s:hi('SignifySignDelete', [161, 161], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+
+" vim-choosewin
+" -------------
+call s:hi('ChooseWinLabel', [s:dark_bg + 3, s:light_bg - 12], [s:dark_bg - 1, s:light_bg - 2])
+call s:hi('ChooseWinLabelCurrent', [108, 65], [31, 31], 'bold')
+call s:hi('ChooseWinLand', [108, 65], [s:dark_bg + 1, s:light_bg - 2], 'bold')
+
+" easymotion
+" -------------
+call s:hi('EasyMotionTargetDefault', [168, 168], ['', ''])
 
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces     
 " ---------------------------------------------------^^^^^
@@ -505,7 +520,7 @@ call s:hi('rubyCurlyBlockDelimiter', [144, 101], ['', ''])
 call s:hi('rubyPredefinedIdentifier', [230, 52], ['', ''])
 " hi rubyRegexpSpecial
 
-let s:background = '#3a3a3a' 
+  let s:background = '#3a3a3a' 
 let s:foreground = '#d0d0d0' 
 let s:color0 = '#4e4e4e'
 let s:color1 = '#d68787' 
